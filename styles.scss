@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$color-cyan:hsl(179, 62%, 43%);
+$color-bright-yellow:hsl(71, 73%, 54%);
+$color-white:rgb(255, 255, 255);
+$color-light-gray:hsl(204, 43%, 93%);
+$color-grayish-blue:hsl(218, 22%, 67%);
+$color-background:rgba(207, 204, 204, 0.589);
+$color-cyan2:#4ABEBD;
+$font-family: 'Karla',sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    background-color: $color-white;
+    font-family: $font-family;
+}
+main{
+    display: grid;
+    min-width: 60rem;
+    margin: 10rem auto;
+    width: 50%;
+    height: 60rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    grid-template-areas:
+     "header header"
+     "sectionL sectionR";
+     grid-template-rows: 30rem;
+     grid-template-columns: 1fr 1fr;
+
+    box-shadow: 12px 12px 24px #d9d9d9, -12px -12px 24px #ffffff;
+    header{
+        padding: 4rem 5rem;
+        grid-area: header;
+        background-color: $color-white;
+        h1{
+                color: $color-cyan;
+                font-size: 3.5rem;
+            }
+        
+            h2{
+                margin-top: 2.5rem;
+                color: $color-bright-yellow;
+                font-size: 2.5rem;
+            }
+        
+            p{
+                margin-top: 2.5rem;
+                color: $color-grayish-blue;
+                font-size: 2rem;
+            }
+    }
+    .section-left{
+        grid-area: sectionL;
+        background-color: $color-cyan;
+        padding: 4rem;
+
+        h3,h4,h5,button{
+            color: $color-white;
+        }
+        h3{
+            margin-top: 1rem;
+            font-size: 2rem;
+            
+        }
+        h4{
+            margin-top: 2rem;
+            font-size: 3rem;
+            span{
+                font-size: 2rem;
+                color: rgba(255, 255, 255, 0.562);
+                font-weight: 400;
+            }
+
+        }
+        h5{
+                margin-top: 1.5rem;
+                font-size: 2rem;
+                font-weight: 400;
+        }
+        button{
+            margin-top: 3.5rem;
+            padding: 2rem 40%;
+            border: none;
+            border-radius: .6rem;
+            background-color: $color-bright-yellow;
+            font-weight: 700;
+            box-shadow: 12px 12px 24px #28817b, -12px -12px 24px #36afa7;
+            font-size: 1.4rem;
+        }
+
+     
+    }
+    .section-right{
+        grid-area: sectionR;
+        background-color:$color-cyan2;
+        padding: 4em;
+        h6{
+            margin-top: 1rem;
+            color: $color-light-gray;
+            font-size: 2.3rem;
+        }
+        ul{
+            margin-top: 2rem;
+            li{
+                font-size: 1.9rem;
+                list-style-type: none;
+                color: rgba(255, 255, 255, 0.753);
+            }
+        }
+       
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+main {
+        min-width: 20rem;
+        margin: 5rem auto;
+        width: 90%;
+        height: auto; 
+        grid-template-areas:
+            "header"
+            "sectionL"
+            "sectionR";
+            ;
+        grid-template-rows: 40rem; 
+        grid-template-columns: 1fr; 
+
+    
+
+        header {
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                margin-top: 3rem;
+                font-size: 2rem;
+            }
+            p{
+                letter-spacing: .1rem;
+                width: 100%;
+            }
+        }
+
+
+    }
+  
+}
